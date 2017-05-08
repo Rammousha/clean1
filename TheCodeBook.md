@@ -191,4 +191,4 @@ to get the final list of names of the final "tidy_data":
 [73] "angle(Y,gravityMean)"                             
 [74] "angle(Z,gravityMean)"                             
 
-13. We finally use write.table() to write the  data.frame "tidy_data" in table_format before submission.
+14. We finally use write.table() to write the  data.frame "tidy_data" in table_format before submission.
