@@ -4,7 +4,7 @@
 library(dplyr) 
 
 
-#staging the data 
+#The link to download the data 
 url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip" 
 
 
