@@ -104,11 +104,11 @@ trainX, trainY, testX, testY, yLabels, xLabels, trainSubject, testSubject
 
 12  We further improve the naming by chaning the following:
 
-t  into time
-f into frequency
-Acc into acceleration
-Mag into magnitude
-Gyro into gyroscope
+t  into time  
+f into frequency  
+Acc into acceleration  
+Mag into magnitude  
+Gyro into gyroscope  
 
 to get the final list of names of the final "tidy_data":
 
