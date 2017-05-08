@@ -53,7 +53,7 @@ valid_column_names <- make.names(names=names(target_data), unique=TRUE, allow_ =
 names(target_data) <- valid_column_names
 
 #Extracts only the measurements on the mean and standard deviation for each measurement. 
-subset = grep("mean[()]|std|activity|subject",names(target_data),ignore.case=TRUE) 
+subset = grep("mean[..]|std|activity|subject",names(target_data),ignore.case=TRUE) 
 target_data_mean_std = target_data[,subset] 
 
 
