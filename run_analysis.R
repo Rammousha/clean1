@@ -48,7 +48,7 @@ target_data = cbind(AllSubjects,activity,init_target_data)
 
 
 
-#Fix Duplicated columns:
+#Fix Duplicated columns names:
 valid_column_names <- make.names(names=names(target_data), unique=TRUE, allow_ = TRUE)
 names(target_data) <- valid_column_names
 
@@ -59,7 +59,8 @@ target_data_mean_std = target_data[,subset]
 
 
 
-#create an independent tidy data set with the average of each variable for each activity and each subject 
+# Creates an independent "tidy_data" dataset by grouping on 2 variables in "target_data_mean_std" dataset: SubjectCode & activityName and
+# summarizing (aggregating) the mean of the rest of columns(also excluding a third col: activityCode)
 tidy_data = group_by(target_data_mean_std, subjectCode, activityName) %>% summarise_each(funs(mean(., na.rm=TRUE)), -c(subjectCode, activityCode, activityName)) 
 
 
