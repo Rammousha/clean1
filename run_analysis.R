@@ -49,7 +49,8 @@ target_data = cbind(AllSubjects,activity,init_target_data)
 
 
 #Fix Duplicated columns:
-valid_column_names <- make.names(names=names(target_data), unique=TRUE, allow_ = TRUE)names(target_data) <- valid_column_names
+valid_column_names <- make.names(names=names(target_data), unique=TRUE, allow_ = TRUE)
+names(target_data) <- valid_column_names
 
 #Extracts only the measurements on the mean and standard deviation for each measurement. 
 subset = grep("mean[()]|std|activity|subject",names(target_data),ignore.case=TRUE) 
@@ -59,8 +60,7 @@ target_data_mean_std = target_data[,subset]
 
 
 #create an independent tidy data set with the average of each variable for each activity and each subject 
-tidy_data = group_by(target_data_mean_std, subjectCode, activityName) %>% 
-  summarise_each(funs(mean(., na.rm=TRUE)), -c(subjectCode, activityCode, activityName)) 
+tidy_data = group_by(target_data_mean_std, subjectCode, activityName) %>% summarise_each(funs(mean(., na.rm=TRUE)), -c(subjectCode, activityCode, activityName)) 
 
 
 
