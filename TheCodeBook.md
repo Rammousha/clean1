@@ -100,7 +100,7 @@ trainX, trainY, testX, testY, yLabels, xLabels, trainSubject, testSubject
 10. We extract only the measurements on the mean and standard deviation for each measurement by subsetting the "target_data" to obtain a new dataset: 
 "target_data_mean_std"
 
-11. We create an independent "tidy_data" dataset with by grouping on 2 variables in "target_data_mean_std" dataset: SubjectCode & activityName and summarizing (aggregating) the mean of the rest of columns(also excluding a third col: subjectCode)
+11. We create an independent "tidy_data" dataset with by grouping on 2 variables in "target_data_mean_std" dataset: SubjectCode & activityName and summarizing (aggregating) the mean of the rest of columns(also excluding a third col: activityCode)
 
 12  We further improve the naming by chaning the following:
 
