@@ -33,7 +33,7 @@ init_target_data = rbind(trainX,testX)
 
 #Uses descriptive activity names to name the activities in the data set 
 activity = rbind(trainY,testY) 
-activity = merge(activity, yLabels, by="V1") 
+activity = left_join(activity, yLabels, by="V1") 
 names(activity) = c("activityCode", "activityName") 
 
 # Create a data frame(AllSubjects) by row-binding the 2 data sets: trainSubject, testSubject. 
