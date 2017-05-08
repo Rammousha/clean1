@@ -97,12 +97,15 @@ trainX, trainY, testX, testY, yLabels, xLabels, trainSubject, testSubject
 
 9. We get our "target_data" (before additional required summaries in the project instructions) dataset by column-binding the 3 datasets obtained from the 3 previous steps:"AllSubjects", "Activity", "init_target_data".
 
-10. We extract only the measurements on the mean and standard deviation for each measurement by subsetting the "target_data" to obtain a new dataset: 
+10. We fix duplicated column names in "target_data" we obtained in the above step.
+
+
+11. We extract only the measurements on the mean and standard deviation for each measurement by subsetting the "target_data" to obtain a new dataset: 
 "target_data_mean_std"
 
-11. We create an independent "tidy_data" dataset with by grouping on 2 variables in "target_data_mean_std" dataset: SubjectCode & activityName and summarizing (aggregating) the mean of the rest of columns(also excluding a third col: activityCode)
+12. We create an independent "tidy_data" dataset with by grouping on 2 variables in "target_data_mean_std" dataset: SubjectCode & activityName and summarizing (aggregating) the mean of the rest of columns(also excluding a third col: activityCode)
 
-12  We further improve the naming by chaning the following:
+13  We further improve the naming by chaning the following by giving units meaningful names:
 
 t  into time  
 f into frequency  
